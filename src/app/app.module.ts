@@ -4,10 +4,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
 import { entityConfig } from './entity-metadata';
-import { TodoListModule } from './todo-list/todo-list.module';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
+import { TodoListModule } from './features/todo-list/todo-list.module';
 
 const defaultDataServiceConfig: DefaultDataServiceConfig = {
   root: 'https://jsonplaceholder.typicode.com/',

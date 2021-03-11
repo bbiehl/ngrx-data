@@ -9,6 +9,6 @@ import {
 })
 export class TodoListService extends EntityCollectionServiceBase<any> {
   constructor(serviceElementsFactory: EntityCollectionServiceElementsFactory) {
-    super('Todo', serviceElementsFactory);
+    super('todo', serviceElementsFactory);
   }
 }
