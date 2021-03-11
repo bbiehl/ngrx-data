@@ -1,9 +1,9 @@
-<div *ngIf="isLoading$ | async; else elseTemplate">
-  <h1>Fetching todos...</h1>
+<div *ngIf="isLoading$ | async; else todosTemplate">
+    <h1>Fetching todos...</h1>
 </div>
 
-<ng-template #elseTemplate>
-  <pre>{{ todos$ | async | json }}</pre>
+<ng-template #todosTemplate>
+    <pre>{{ todos$ | async | json }}</pre>
 </ng-template>
 
-<pre>{{ errors$ | async | json }}</pre>
+<div *ngIf="errors$ | async">Ope!, there was an error!</div>

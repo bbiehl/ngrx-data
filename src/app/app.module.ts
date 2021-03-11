@@ -10,24 +10,27 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodoListModule } from './features/todo-list/todo-list.module';
 
 const defaultDataServiceConfig: DefaultDataServiceConfig = {
-  root: 'https://jsonplaceholder.typicode.com/',
-  getDelay: 3000,
+    root: 'https://jsonplaceholder.typicode.com/',
+    getDelay: 3000,
 };
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    AppRoutingModule,
-    BrowserModule,
-    EffectsModule.forRoot([]),
-    EntityDataModule.forRoot(entityConfig),
-    HttpClientModule,
-    StoreModule.forRoot({}, {}),
-    TodoListModule,
-  ],
-  providers: [
-    { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig },
-  ],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [
+        AppRoutingModule,
+        BrowserModule,
+        EffectsModule.forRoot([]),
+        EntityDataModule.forRoot(entityConfig),
+        HttpClientModule,
+        StoreModule.forRoot({}, {}),
+        TodoListModule,
+    ],
+    providers: [
+        {
+            provide: DefaultDataServiceConfig,
+            useValue: defaultDataServiceConfig,
+        },
+    ],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
